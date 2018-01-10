@@ -34,12 +34,15 @@ hbs.registerHelper('getCurrentYear',()=>{
 /*hbs.registerHelper('screamIt',(text)=>{
   return text.toUpperCase()
 });*/
-
 app.get('/',(req,res)=>{
-  //res.send('<h1>Hello World');
   res.render('home.hbs',{
-    welcomeMessage:'Alay Dhagia'
-  })
+    theName:'Alay'
+  });
+})
+
+app.get('/home',(req,res)=>{
+  var x = req.id.nam;
+  console.log(x);
 })
 
 app.get('/about',(req,res)=>{
