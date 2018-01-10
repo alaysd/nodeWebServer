@@ -39,7 +39,11 @@ app.get('/',(req,res)=>{
     theName:'Alay'
   });
 })
-
+app.get('/projects',(req,res)=>{
+  res.render('projects.hbs',{
+    theProjects: 'HERKO trial'
+  })
+});
 app.get('/home',(req,res)=>{
   var x = req.id.nam;
   console.log(x);
